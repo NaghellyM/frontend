@@ -1,0 +1,39 @@
+<div class="header bg-gradient-danger pb-8 pt-5 pt-md-8">
+
+</div>
+<!-- Page content -->
+<div class="container-fluid mt--7">
+    <!-- Table -->
+    <div class="row">
+        <div class="col">
+            <div class="card shadow">
+                <div class="card-header border-0">
+                    <h3 class="mb-0">Teatros</h3>
+
+                </div>
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Id</th>
+                                <th scope="col">Ubicacion</th>
+                                <th scope="col">Capacidad</th>
+                                <th scope="col">opciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let actual of theaters">
+                                <td>{{actual.id}}</td>
+                                <td>{{actual.capacity}}</td>
+                                <td>{{actual.location}}</td>
+                                <td>{{actual.id}}</td>
+                                <button type="button" class="btn btn-warning">Editar</button>
+                                <button type="button" class="btn btn-dark">Eliminar</button>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
