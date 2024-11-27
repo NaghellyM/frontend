@@ -12,6 +12,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
+import { SecurityService } from './services/security.service';
+
 
 
 @NgModule({
@@ -22,14 +24,10 @@ import { ComponentsModule } from './components/components.module';
     ComponentsModule,
     NgbModule,
     RouterModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
-  declarations: [
-    AppComponent,
-    AdminLayoutComponent,
-    AuthLayoutComponent
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  declarations: [AppComponent, AdminLayoutComponent, AuthLayoutComponent],
+  providers: [SecurityService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
